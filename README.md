@@ -52,10 +52,3 @@ Le composant Layout encapsule le DashboardLayout et utilise le composant Outlet 
 Les pages (comme CompaniesPage ou CompanyPage) sont des enfants de Layout.
 Layout, lui-même, est un enfant du composant principal App, qui gère le contexte global de l'application.
 Cette hiérarchie permet d'organiser clairement les layouts imbriqués, mais demande une attention particulière à la structure des routes.
-
-RouterProvider
-   └── App
-       ├── Layout (via <Outlet /> dans App)
-       │    ├── CompaniesPage (via <Outlet /> dans Layout)
-       │    └── CompanyPage (via <Outlet /> dans Layout)
-
