@@ -1,0 +1,31 @@
+{
+	"editor.tabSize": 4,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"prettier.requireConfig": true,
+	"prettier.ignorePath": ".prettierignore",
+	"prettier.configPath": ".prettierrc",
+	"prettier.jsxSingleQuote": true,
+	"prettier.trailingComma": "es5",
+	"prettier.arrowParens": "always",
+	"prettier.printWidth": 80,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.associations": {
+		"*.jsx": "javascriptreact"
+	}
+}
