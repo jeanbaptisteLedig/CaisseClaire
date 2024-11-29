@@ -1,15 +1,13 @@
-import Leaderboard from './leaderboard'
 import Posts from './posts'
+import Stories from './stories'
+import NewPost from './newPost'
 
 export default function Thread() {
 	return (
-		<div className="flex">
-			<div className="w-2/3  p-4">
-				<Posts />
-			</div>
-			<div className="w-1/3  p-4">
-				<Leaderboard />{' '}
-			</div>
-		</div>
+		<>
+			<Stories />
+			<NewPost />
+			<Posts />
+		</>
 	)
 }

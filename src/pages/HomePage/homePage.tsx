@@ -1,6 +1,17 @@
+import Leaderboard from '../../components/Thread/leaderboard'
 import Thread from '../../components/Thread/thread'
 
 export default function HomePage() {
+	const expertsLeaderboard: ILeaderboardList = [
+		{ id: 1, name: 'John Doe', avatar: 'https://i.pravatar.cc/150?img=3' },
+		{ id: 2, name: 'Jane Smith', avatar: 'https://i.pravatar.cc/150?img=5' },
+		{ id: 3, name: 'Alice Brown', avatar: 'https://i.pravatar.cc/150?img=6' },
+	]
+	const stocksLeaderboard: ILeaderboardList = [
+		{ id: 1, name: 'Apple', avatar: 'https://i.pravatar.cc/150?img=3' },
+		{ id: 2, name: 'Starbucks', avatar: 'https://i.pravatar.cc/150?img=5' },
+		{ id: 3, name: 'Adidas', avatar: 'https://i.pravatar.cc/150?img=6' },
+	]
 	return (
 		<div>
 			{/* Header Section */}
@@ -21,7 +32,16 @@ export default function HomePage() {
 					</div>
 				</div>
 			</div>
-			<Thread />
+			{/* Content Section */}
+			<div className="flex flex-col sm:flex-row mt-4">
+				<div className="w-full sm:w-2/3 px-4">
+					<Thread />
+				</div>
+				<div className="w-full sm:w-1/3 px-4">
+					<Leaderboard title="Experts Leaderboard" list={expertsLeaderboard} />
+					<Leaderboard title="Stocks Leaderboard" list={stocksLeaderboard} />
+				</div>
+			</div>
 		</div>
 	)
 }

@@ -1,20 +1,22 @@
-export default function Leaderboard() {
-	const users = [
-		{ id: 1, name: 'John Doe', avatar: 'https://i.pravatar.cc/150?img=3' },
-		{ id: 2, name: 'Jane Smith', avatar: 'https://i.pravatar.cc/150?img=5' },
-		{ id: 3, name: 'Alice Brown', avatar: 'https://i.pravatar.cc/150?img=6' },
-	]
+export default function Leaderboard({ title, list }: { title: string; list: ILeaderboardList }) {
 	return (
-		<div className="max-w-4xl mx-auto py-6">
-			<h2 className="text-2xl font-semibold mb-4">Leaderboard</h2>
+		<div className="max-w-4xl mx-auto mb-6 p-3 bg-white rounded-xl">
+			<h2 className="font-semibold mb-4">{title}</h2>
 			<div className="space-y-4">
-				{users.map((user) => (
-					<div key={user.id} className="flex items-center justify-between bg-white shadow-lg rounded-lg p-4">
-						{/* Left Side: Avatar and User Info */}
+				{list.map((element) => (
+					<div
+						key={element.id}
+						className="flex items-center justify-between bg-white shadow-lg rounded-lg p-4"
+					>
+						{/* Left Side: Avatar and Element Info */}
 						<div className="flex items-center space-x-4">
-							<img className="w-12 h-12 rounded-full" src={user.avatar} alt={`${user.name}'s Avatar`} />
+							<img
+								className="w-12 h-12 rounded-full"
+								src={element.avatar}
+								alt={`${element.name}'s Avatar`}
+							/>
 							<div>
-								<p className="text-xl font-semibold">{user.name}</p>
+								<p className="text-xl font-semibold">{element.name}</p>
 								<p className="text-gray-500">Bonjour</p>
 							</div>
 						</div>
