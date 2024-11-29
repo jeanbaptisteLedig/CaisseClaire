@@ -74,6 +74,7 @@ export default [
 			'no-debugger': 'warn',
 			'no-alert': 'warn',
 			'no-undef': 'warn',
+			'no-var': 'warn',
 			'no-unreachable': 'warn',
 			'no-else-return': 'warn',
 
