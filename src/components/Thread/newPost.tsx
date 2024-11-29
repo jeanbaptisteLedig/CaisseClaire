@@ -8,7 +8,7 @@ export default function NewPost() {
 			{/* Textarea input */}
 			<textarea
 				placeholder="What's on your mind?"
-				className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+				className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
 			/>
 			<div className="flex justify-between items-center">
 				{/* Button to add cotent */}
@@ -18,7 +18,7 @@ export default function NewPost() {
 					<VideocamOutlinedIcon />
 				</div>
 				{/* Button to post */}
-				<button className="ml-auto px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none">
+				<button className="ml-auto px-6 py-2 bg-sky-700 text-white rounded-md hover:bg-sky-800 focus:outline-none">
 					Post
 				</button>
 			</div>

@@ -22,7 +22,7 @@ export default function Leaderboard({ title, list }: { title: string; list: ILea
 						</div>
 
 						{/* Right Side: Follow Button */}
-						<span className="rounded-full items-center bg-slate-800 px-1.5 py-0.5 border border-transparent text-sm text-white transition-all shadow-sm">
+						<span className="rounded-full items-center bg-sky-500 px-1.5 py-0.5 border border-transparent text-sm text-white transition-all shadow-sm">
 							Follow
 						</span>
 					</div>
