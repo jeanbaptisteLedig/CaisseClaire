@@ -1,53 +1,10 @@
 import { useState } from 'react'
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
-
-const storiesData = [
-	{
-		id: 1,
-		image: 'https://picsum.photos/id/147/200/300',
-		title: 'Story 1',
-		description: 'This is the description for Story 1.',
-	},
-	{
-		id: 2,
-		image: 'https://picsum.photos/id/151/200/300',
-		title: 'Story 2',
-		description: 'This is the description for Story 2.',
-	},
-	{
-		id: 3,
-		image: 'https://picsum.photos/id/164/200/300',
-		title: 'Story 3',
-		description: 'This is the description for Story 3.',
-	},
-	{
-		id: 4,
-		image: 'https://picsum.photos/id/184/200/300',
-		title: 'Story 4',
-		description: 'This is the description for Story 4.',
-	},
-	{
-		id: 5,
-		image: 'https://picsum.photos/id/210/200/300',
-		title: 'Story 5',
-		description: 'This is the description for Story 5.',
-	},
-	{
-		id: 6,
-		image: 'https://picsum.photos/id/210/200/300',
-		title: 'Story 6',
-		description: 'This is the description for Story 6.',
-	},
-	{
-		id: 7,
-		image: 'https://picsum.photos/id/210/200/300',
-		title: 'Story 7',
-		description: 'This is the description for Story 7.',
-	},
-]
+import { fetchStoriesData } from '../../services/api-services'
 
 const Stories = () => {
+	const [storiesData, setStoriesData] = useState<IStories>(fetchStoriesData())
 	const [startIndex, setStartIndex] = useState(0)
 	const visibleStoriesCount = 3
 	const stepper = 1

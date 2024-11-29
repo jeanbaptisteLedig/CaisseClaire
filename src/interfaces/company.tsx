@@ -1,6 +1,8 @@
 interface ICompany {
 	symbol: string
 	name: string
+	change: Array<number>
+	volume: string
 }
 interface IMetaData {
 	status: number

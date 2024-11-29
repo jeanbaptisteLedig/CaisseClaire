@@ -4,3 +4,5 @@ interface IPost {
 	content: string
 	date: string
 }
+
+type IPosts = IPost[]

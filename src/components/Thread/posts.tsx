@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import { Stack } from '@mui/material'
+import { fetchPosts } from '../../services/api-services'
 
 export default function Posts() {
-	const [posts, setPosts] = useState<IPost[]>([
-		{ id: 1, author: 'John Doe', content: 'Excited for the weekend!', date: 'Right now' },
-		{ id: 2, author: 'Jane Smith', content: 'Learning React is fun!', date: '2 mins ago' },
-	])
+	const [posts, setPosts] = useState<IPosts>(fetchPosts())
 	return (
 		<div>
 			{posts.map((post) => (

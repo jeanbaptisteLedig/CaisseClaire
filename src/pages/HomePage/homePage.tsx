@@ -1,17 +1,8 @@
 import Leaderboard from '../../components/Thread/leaderboard'
 import Thread from '../../components/Thread/thread'
+import { fetchExpertsLeaderboard, fetchStocksLeaderboard } from '../../services/api-services'
 
 export default function HomePage() {
-	const expertsLeaderboard: ILeaderboardList = [
-		{ id: 1, name: 'John Doe', avatar: 'https://i.pravatar.cc/150?img=3' },
-		{ id: 2, name: 'Jane Smith', avatar: 'https://i.pravatar.cc/150?img=5' },
-		{ id: 3, name: 'Alice Brown', avatar: 'https://i.pravatar.cc/150?img=6' },
-	]
-	const stocksLeaderboard: ILeaderboardList = [
-		{ id: 1, name: 'Apple', avatar: 'https://i.pravatar.cc/150?img=3' },
-		{ id: 2, name: 'Starbucks', avatar: 'https://i.pravatar.cc/150?img=5' },
-		{ id: 3, name: 'Adidas', avatar: 'https://i.pravatar.cc/150?img=6' },
-	]
 	return (
 		<div>
 			{/* Header Section */}
@@ -38,8 +29,8 @@ export default function HomePage() {
 					<Thread />
 				</div>
 				<div className="w-full sm:w-1/3 px-4">
-					<Leaderboard title="Experts Leaderboard" list={expertsLeaderboard} />
-					<Leaderboard title="Stocks Leaderboard" list={stocksLeaderboard} />
+					<Leaderboard title="Experts Leaderboard" list={fetchExpertsLeaderboard()} />
+					<Leaderboard title="Stocks Leaderboard" list={fetchStocksLeaderboard()} />
 				</div>
 			</div>
 		</div>
