@@ -29,3 +29,11 @@ main {
 .ag-row:hover {
 	cursor: pointer;
 }
+
+/* Gradient Text for user name */
+.gradient-text:hover {
+	background-image: linear-gradient(to right, #0ea5e9, #6366f1, #d946ef);
+	background-clip: text;
+	color: transparent;
+	-webkit-background-clip: text; /* Pour le support Webkit */
+}

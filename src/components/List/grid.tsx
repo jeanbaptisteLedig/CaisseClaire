@@ -1,6 +1,6 @@
 // Theme
-import { ColDef } from 'ag-grid-community'
-import { AgGridReact } from 'ag-grid-react'
+import { ColDef, ValueFormatterParams } from 'ag-grid-community'
+import { AgGridReact, CustomCellRendererProps } from 'ag-grid-react'
 // Core CSS
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-quartz.css'
@@ -9,12 +9,33 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { fetchCompanies } from '../../services/api-services'
+import { SparkLineChart } from '@mui/x-charts'
+import { Box } from '@mui/material'
+
+const CustomSparkLineChart = (params: CustomCellRendererProps) => {
+	return (
+		<Box sx={{ flexGrow: 1 }}>
+			<SparkLineChart data={params.value} height={48} colors={['#0ea5e9']} area />
+		</Box>
+	)
+}
+const changeFormatter = (params: CustomCellRendererProps) => {
+	return (
+		<Box sx={{ flexGrow: 1 }}>
+			<p className={`${params.value > 0 ? 'text-emerald-500' : 'text-red-600'} text-right`}>{params.value}%</p>
+		</Box>
+	)
+}
+
+const currencyFormatter = (params: ValueFormatterParams) => {
+	return '$' + params.value
+}
 
 // Create new Grid component
 const Grid = () => {
 	const navigate = useNavigate()
 
-	const [rowData, setRowData] = useState<any[]>(fetchCompanies(20).companies)
+	const [rowData, setRowData] = useState<ICompany[]>(fetchCompanies(20).companies)
 
 	const [columnDefs, setColumnDefs] = useState<ColDef[]>([
 		{ field: 'symbol', maxWidth: 120 },
@@ -22,7 +43,19 @@ const Grid = () => {
 		{
 			field: 'volume',
 			type: 'numericColumn',
-			maxWidth: 140,
+			maxWidth: 100,
+			valueFormatter: currencyFormatter,
+		},
+		{
+			field: 'change',
+			cellRenderer: changeFormatter,
+			type: 'rightAligned',
+			maxWidth: 100,
+		},
+		{
+			field: 'evolution',
+			cellRenderer: CustomSparkLineChart,
+			maxWidth: 200,
 		},
 	])
 
@@ -32,7 +65,7 @@ const Grid = () => {
 	}
 
 	return (
-		<div style={{ height: '70vh', width: '100%' }}>
+		<div style={{ height: '50vh', width: '100%' }}>
 			<div style={{ height: '100%', width: '100%' }} className={'ag-theme-quartz'}>
 				<AgGridReact
 					rowData={rowData}

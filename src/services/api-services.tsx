@@ -14,20 +14,13 @@ export const fetchCompanies = (limit: number): IResponseCompanies => {
 
 export const fetchCompany = (symbol: string): IResponseCompany => {
 	const company = getData().find((element) => element.symbol === symbol)
-	const response: IResponseCompany = {
+	let response: IResponseCompany = {
 		meta: {
 			status: 200,
 			message: 'success',
 			method: "GET company name and today's price by symbol",
-			company: company,
 		},
-		data: {
-			date: new Date(),
-			open: 163.21,
-			close: 165.35,
-			high: 165.85,
-			low: 163,
-		},
+		data: company,
 	}
 	return response
 }
@@ -36,8 +29,9 @@ export const fetchPosts = (): IPosts => {
 	return [
 		{
 			id: 1,
-			content: 'Excited for the weekend!',
-			date: 'Right now',
+			content: `The stock market showed mixed results today, with tech stocks leading the gains. 
+                  It’s always fascinating to see how market sentiment shifts in reaction to global events.`,
+			date: '5 mins ago',
 			author: {
 				id: '1',
 				name: 'John Doe',
@@ -47,8 +41,104 @@ export const fetchPosts = (): IPosts => {
 		},
 		{
 			id: 2,
-			content: 'Learning React is fun!',
-			date: '2 mins ago',
+			content: `I just finished reading a book on value investing. The principles of buying undervalued stocks and holding them long-term 
+                  make so much sense in today’s volatile market.`,
+			date: '15 mins ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 3,
+			content: `Diversification is key. I’ve been adding more ETFs to my portfolio to balance out the risks of individual stocks. 
+                  It’s amazing how much peace of mind it brings.`,
+			date: '45 mins ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 4,
+			content: `The Federal Reserve hinted at potential interest rate hikes. This could impact borrowing costs significantly, 
+                  so I’m re-evaluating my investment strategy.`,
+			date: '1 hour ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 5,
+			content: `Cryptocurrency markets are bouncing back after last week’s dip. Bitcoin and Ethereum are seeing a lot of momentum, 
+                  but I’m staying cautious given the volatility.`,
+			date: '2 hours ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 6,
+			content: `I’ve been exploring dividend stocks lately. The idea of earning passive income consistently over time 
+                  is incredibly appealing for long-term wealth building.`,
+			date: '6 hours ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 7,
+			content: `Started a budget tracking app today. It’s shocking to see how small expenses add up over time. 
+                  Tracking every dollar really makes a difference in saving.`,
+			date: '1 day ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 8,
+			content: `Gold prices are on the rise again, as investors seek safe havens amidst economic uncertainty. 
+                  It’s a reminder of how important it is to hedge against inflation.`,
+			date: '2 days ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 9,
+			content: `I’ve been learning about real estate investing. The potential for cash flow and property appreciation 
+                  makes it a powerful tool for building wealth.`,
+			date: '3 days ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
+		{
+			id: 10,
+			content: `Spent some time researching the impact of AI on financial markets. It’s incredible how technology is changing the way we trade and analyze data.`,
+			date: '1 week ago',
 			author: {
 				id: '1',
 				name: 'Jane Smith',

@@ -15,20 +15,22 @@ export default function HomePage() {
 					/>
 					<div className="ml-4">
 						<h2 className="text-2xl font-semibold text-gray-900">
-							Welcome, <span className="font-bold">Jean-Baptiste</span>
+							Welcome,
+							<span className="ml-1 inline-block gradient-text">Jean-Baptiste</span>
 						</h2>
+
 						<p className="text-gray-500">
-							You have <span className="font-bold">7</span> stocks to share
+							You have <span className="font-bold">7</span> featured stories to view
 						</p>
 					</div>
 				</div>
 			</div>
 			{/* Content Section */}
-			<div className="flex flex-col sm:flex-row mt-4">
-				<div className="w-full sm:w-2/3 px-4">
+			<div className="flex flex-col lg:flex-row mt-4">
+				<div className="w-full lg:w-2/3 px-4">
 					<Thread />
 				</div>
-				<div className="w-full sm:w-1/3 px-4">
+				<div className="w-full lg:w-1/3 px-4">
 					<Leaderboard title="Experts Leaderboard" list={fetchExpertsLeaderboard()} />
 					<Leaderboard title="Stocks Leaderboard" list={fetchStocksLeaderboard()} />
 				</div>

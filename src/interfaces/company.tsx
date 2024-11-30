@@ -1,8 +1,10 @@
 interface ICompany {
 	symbol: string
 	name: string
-	change: Array<number>
-	volume: string
+	change: number
+	volume: number
+	description: string
+	evolution: Array<number>
 }
 interface IMetaData {
 	status: number
@@ -13,14 +15,6 @@ interface IMetaDataCompanies extends IMetaData {
 }
 interface IMetaDataCompany extends IMetaData {
 	method: string
-	company: ICompany
-}
-interface IData {
-	date: Date
-	open: number
-	close: number
-	high: number
-	low: number
 }
 
 interface IResponseCompanies {
@@ -30,5 +24,5 @@ interface IResponseCompanies {
 
 interface IResponseCompany {
 	meta: IMetaDataCompany
-	data: IData
+	data: ICompany | undefined
 }
