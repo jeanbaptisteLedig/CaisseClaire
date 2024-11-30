@@ -1,10 +1,11 @@
 import { useQuery } from '@tanstack/react-query'
-import { Outlet } from 'react-router-dom'
 import { fetchCompanies } from '../../services/api-services'
 import { useEffect, useState } from 'react'
 import Grid from '../../components/List/grid'
+import { PageContainer } from '@toolpad/core'
 
 function CompaniesPage() {
+	const [title, setTitle] = useState<string>('Stocks Companies')
 	const [limit, setLimit] = useState<number>(10)
 	const [companies, setCompanies] = useState<Array<ICompany>>([])
 
@@ -28,9 +29,9 @@ function CompaniesPage() {
 	}
 
 	return (
-		<div>
-			<h1 className="">List of companies</h1>
-		</div>
+		<PageContainer title={title}>
+			<Grid />
+		</PageContainer>
 	)
 }
 

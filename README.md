@@ -76,6 +76,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### Notes
 
+#### Dashboard Layout by MUI Toolpad
+
 Pour gagner du temps sur la mise en place de la structure globale, j'ai préféré un composant clé en main : DashboardLayout de Toolpad (MUI). Cependant, j'ai rencontré une difficulté lors de son intégration, car les routes définies dans le routeur doivent être imbriquées sous une route principale ('/') qui retourne le composant Layout.
 
 Le composant Layout encapsule le DashboardLayout et utilise le composant Outlet de react-router-dom pour rendre dynamiquement les pages enfants. Ainsi, la structure diffère légèrement d'une configuration classique :
@@ -83,3 +85,7 @@ Le composant Layout encapsule le DashboardLayout et utilise le composant Outlet 
 Les pages (comme CompaniesPage ou CompanyPage) sont des enfants de Layout.
 Layout, lui-même, est un enfant du composant principal App, qui gère le contexte global de l'application.
 Cette hiérarchie permet d'organiser clairement les layouts imbriqués, mais demande une attention particulière à la structure des routes.
+
+#### AG-Grid
+
+J'ai voulu utiliser AG-Grid pour me familiariser avec cette bibliothèque et découvrir ses fonctionnalités. Malheureusement, de nombreuses fonctionnalités ne sont pas disponibles dans la version gratuite, notamment les Sparklines, qui me semblaient intéressantes pour une application affichant des données sur des tendances.

@@ -1,6 +1,6 @@
 interface IPost {
 	id: number
-	author: string
+	author: IUser
 	content: string
 	date: string
 }

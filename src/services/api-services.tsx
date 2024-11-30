@@ -34,26 +34,54 @@ export const fetchCompany = (symbol: string): IResponseCompany => {
 
 export const fetchPosts = (): IPosts => {
 	return [
-		{ id: 1, author: 'John Doe', content: 'Excited for the weekend!', date: 'Right now' },
-		{ id: 2, author: 'Jane Smith', content: 'Learning React is fun!', date: '2 mins ago' },
+		{
+			id: 1,
+			content: 'Excited for the weekend!',
+			date: 'Right now',
+			author: {
+				id: '1',
+				name: 'John Doe',
+				email: 'john.doe@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671126.jpg?t=st=1732971144~exp=1732974744~hmac=8092f8fc0fd211b02a2d87a1fa8d2ab49ced2c07c57021df120db89d2b8b975c&w=1800',
+			},
+		},
+		{
+			id: 2,
+			content: 'Learning React is fun!',
+			date: '2 mins ago',
+			author: {
+				id: '1',
+				name: 'Jane Smith',
+				email: 'jane.smith@email.fr',
+				image: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833574.jpg?t=st=1732971160~exp=1732974760~hmac=d401b269d87f753c730c75fdd53fb483ac6ed6049d3b024bcfcbb4df084b56c9&w=1800',
+			},
+		},
 	]
 }
 
 export const fetchExpertsLeaderboard = (): ILeaderboardList => {
 	return [
-		{ id: 1, name: 'John Doe', avatar: 'https://i.pravatar.cc/150?img=3' },
-		{ id: 2, name: 'Jane Smith', avatar: 'https://i.pravatar.cc/150?img=5' },
-		{ id: 3, name: 'Alice Brown', avatar: 'https://i.pravatar.cc/150?img=6' },
+		{
+			id: 1,
+			name: 'John Doe',
+			avatar: 'https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303048.jpg?t=st=1732970960~exp=1732974560~hmac=1b26c413166c83986ae57ae6180fcebf31c2d3749d9120c38d07642b71de9514&w=1800',
+		},
+		{
+			id: 2,
+			name: 'Jane Smith',
+			avatar: 'https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303093.jpg?t=st=1732971016~exp=1732974616~hmac=4d66b6ce52d0e860e3e5d4572d76bdf2804c5b8770899812c64f50234fe279f1&w=1800',
+		},
+		{
+			id: 3,
+			name: 'Alice Brown',
+			avatar: 'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671124.jpg?t=st=1732971044~exp=1732974644~hmac=3380a93d3fa1375f5117e73051052c56c4b86ea59913cb4035a766d3e55f2a55&w=1800',
+		},
 	]
 }
 
 export const fetchStocksLeaderboard = (): ILeaderboardList => {
 	return [
-		{
-			id: 1,
-			name: 'Apple',
-			avatar: 'https://eu.ui-avatars.com/api/?name=Apple&size=150',
-		},
+		{ id: 1, name: 'Apple', avatar: 'https://eu.ui-avatars.com/api/?name=Apple&size=150' },
 		{ id: 2, name: 'Starbucks', avatar: 'https://eu.ui-avatars.com/api/?name=Starbucks&size=150' },
 		{ id: 3, name: 'Adidas', avatar: 'https://eu.ui-avatars.com/api/?name=Adidas&size=150' },
 	]

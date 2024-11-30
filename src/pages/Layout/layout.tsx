@@ -39,6 +39,7 @@ export default function Layout() {
 			segment: 'companies',
 			title: 'Companies',
 			icon: <BusinessIcon />,
+			pattern: 'companies/:companyId',
 		},
 		{
 			segment: 'orders',

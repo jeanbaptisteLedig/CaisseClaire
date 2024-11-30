@@ -12,7 +12,7 @@ export default function App() {
 			<Route path="/" element={<Layout />}>
 				<Route index element={<HomePage />} />
 				<Route path="companies" element={<CompaniesPage />} />
-				<Route path="company/:symbolId" element={<CompanyPage />} />
+				<Route path="companies/:companyId" element={<CompanyPage />} />
 				<Route path="orders" element={<Orders />} />
 				<Route path="investements" element={<Investements />} />
 			</Route>

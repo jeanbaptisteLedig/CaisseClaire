@@ -24,3 +24,8 @@ body {
 main {
 	background-image: url('https://yeap.ai/wp-content/uploads/2021/11/bgc.svg');
 }
+
+/* AG-Grid Styles */
+.ag-row:hover {
+	cursor: pointer;
+}
