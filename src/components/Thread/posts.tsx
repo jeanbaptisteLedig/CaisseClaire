@@ -22,9 +22,10 @@ export default function Posts() {
 							</Stack>
 						</span>
 						<div>
-							<span className="rounded-full items-center bg-sky-500 px-1.5 py-0.5 border border-transparent text-sm text-white transition-all shadow-sm">
+							{/* Right Side: Follow Button */}
+							<button className="rounded-full items-center bg-sky-500 px-1.5 py-0.5 border border-transparent text-sm text-white transition-all shadow-sm">
 								Follow
-							</span>
+							</button>
 							<MoreVertIcon />
 						</div>
 					</div>
