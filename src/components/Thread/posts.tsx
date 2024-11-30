@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
-import { Stack } from '@mui/material'
 import { fetchPosts } from '../../services/api-services'
 
 export default function Posts() {
@@ -10,16 +9,14 @@ export default function Posts() {
 			{posts.map((post) => (
 				<div key={post.id} className="bg-white shadow-md rounded-lg p-4 mb-4">
 					<div className="flex items-center justify-between">
-						<span>
-							<Stack direction="row">
-								<img
-									className="w-6 h-6 rounded-full"
-									src="https://avatars.githubusercontent.com/u/22798274?v=4"
-									alt="User Avatar"
-								/>
-								<span className="font-semibold pl-1">{post.author}</span>
-								<span className="text-sm text-gray-500 pl-1">{post.date}</span>
-							</Stack>
+						<span className="flex flex-row items-center">
+							<img
+								className="w-6 h-6 rounded-full mr-1"
+								src="https://avatars.githubusercontent.com/u/22798274?v=4"
+								alt="User Avatar"
+							/>
+							<span className="font-semibold pl-1">{post.author}</span>
+							<span className="text-sm text-gray-500 pl-1">{post.date}</span>
 						</span>
 						<div>
 							{/* Right Side: Follow Button */}
