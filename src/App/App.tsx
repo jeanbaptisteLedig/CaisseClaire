@@ -5,6 +5,7 @@ import HomePage from '../pages/HomePage/homePage'
 import CompanyPage from '../pages/CompanyPage/companyPage'
 import Investements from '../pages/Investements/investements'
 import Orders from '../pages/Orders/orders'
+import Contact from '../pages/Contact/contact'
 
 export default function App() {
 	return (
@@ -15,6 +16,7 @@ export default function App() {
 				<Route path="companies/:companyId" element={<CompanyPage />} />
 				<Route path="orders" element={<Orders />} />
 				<Route path="investements" element={<Investements />} />
+				<Route path="contact" element={<Contact />} />
 			</Route>
 		</Routes>
 	)

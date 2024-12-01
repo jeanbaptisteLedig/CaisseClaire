@@ -6,6 +6,7 @@ import BusinessIcon from '@mui/icons-material/Business'
 import HomeIcon from '@mui/icons-material/Home'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline'
+import EmailIcon from '@mui/icons-material/Email'
 
 import { DashboardLayout } from '@toolpad/core/DashboardLayout'
 import { Outlet } from 'react-router-dom'
@@ -51,6 +52,11 @@ export default function Layout() {
 			segment: 'investements',
 			title: 'Investements',
 			icon: <WorkOutlineIcon />,
+		},
+		{
+			segment: 'contact',
+			title: 'Contact',
+			icon: <EmailIcon />,
 		},
 	]
 
