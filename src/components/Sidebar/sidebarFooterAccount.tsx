@@ -1,10 +1,5 @@
 import { SidebarFooterProps } from '@toolpad/core/DashboardLayout'
 import { useState, useMemo } from 'react'
-import MenuList from '@mui/material/MenuList'
-import MenuItem from '@mui/material/MenuItem'
-import ListItemText from '@mui/material/ListItemText'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import Avatar from '@mui/material/Avatar'
 import Divider from '@mui/material/Divider'
 import {
 	Account,
@@ -13,6 +8,7 @@ import {
 	SignOutButton,
 	AccountPreviewProps,
 } from '@toolpad/core/Account'
+import GitHubIcon from '@mui/icons-material/GitHub'
 import { fetchConnectedUser } from '../../services/api-services'
 
 function SidebarFooterAccountPopover() {
@@ -20,44 +16,25 @@ function SidebarFooterAccountPopover() {
 	return (
 		<div className="flex flex-col">
 			<h1 className="text-sm mx-2 mt-1">Accounts</h1>
-			<MenuList>
-				<MenuItem
-					key={userConnected.id}
-					component="button"
-					sx={{
-						justifyContent: 'flex-start',
-						width: '100%',
-						columnGap: 2,
-					}}
-				>
-					<ListItemIcon>
-						<Avatar
-							sx={{
-								width: 32,
-								height: 32,
-								fontSize: '0.95rem',
-								bgcolor: '#0ea5e9',
-							}}
-							src={userConnected.image ?? ''}
-							alt={userConnected.name ?? ''}
-						>
-							{userConnected.name[0]}
-						</Avatar>
-					</ListItemIcon>
-					<ListItemText
-						sx={{
-							display: 'flex',
-							flexDirection: 'column',
-							alignItems: 'flex-start',
-							width: '100%',
-						}}
-						primary={userConnected.name}
-						secondary={userConnected.email}
-						primaryTypographyProps={{ variant: 'body2' }}
-						secondaryTypographyProps={{ variant: 'caption' }}
+			<div className="w-full mx-2 mt-1">
+				<div className="flex items-center space-x-4">
+					<img
+						className="w-8 h-8 rounded-full"
+						src={userConnected.image ?? ''}
+						alt={userConnected.name ?? ''}
 					/>
-				</MenuItem>
-			</MenuList>
+					<div>
+						<span className="flex justify-normal">
+							<p className="text-base font-semibold mr-2">{userConnected.name}</p>
+							<a href="https://github.com/jeanbaptisteLedig">
+								<GitHubIcon fontSize="small" />
+							</a>
+						</span>
+
+						<p className="text-sm text-gray-500">{userConnected.email}</p>
+					</div>
+				</div>
+			</div>
 			<Divider />
 			<AccountPopoverFooter>
 				<SignOutButton />
