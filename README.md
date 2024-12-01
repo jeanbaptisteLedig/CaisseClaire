@@ -1,4 +1,4 @@
-# My Fiancial App
+# CaisseClaire
 
 ## Table of contents
 
@@ -11,7 +11,7 @@
 
 ---
 
-My Financial App is a static web application that I developed as part of my interview process at Yeap.ai.
+CaisseClaire is a static web application that I developed as part of my interview process at Yeap.ai. The objectives was to train for the interview by using Yeap stacks and tools.
 The application is very basic, and its purpose is to help me practice using Yeap's technology stack in preparation for the interview.
 
 ### Technologies
@@ -32,8 +32,8 @@ A list of technologies used within the project:
 How to install the project locally ?
 
 ```powershell
-$ git clone https://github.com/jeanbaptisteLedig/MyFinancialApp.git my-financial-app
-$ git cd my-financial-app
+$ git clone https://github.com/jeanbaptisteLedig/MyFinancialApp.git caisse-claire
+$ git cd caisse-claire
 $ npm install
 $ npm run dev
 ```
