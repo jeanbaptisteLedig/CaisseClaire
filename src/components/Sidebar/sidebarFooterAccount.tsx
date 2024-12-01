@@ -15,23 +15,24 @@ function SidebarFooterAccountPopover() {
 	const [userConnected, setUserConnected] = useState<IUser>(fetchConnectedUser())
 	return (
 		<div className="flex flex-col">
-			<h1 className="text-sm mx-2 mt-1">Accounts</h1>
-			<div className="w-full mx-2 mt-1">
-				<div className="flex items-center space-x-4">
+			<h1 className="mx-2 my-1 text-sm">Accounts</h1>
+			<div className="mx-2 my-1">
+				<div className="flex items-center">
 					<img
 						className="w-8 h-8 rounded-full"
 						src={userConnected.image ?? ''}
 						alt={userConnected.name ?? ''}
 					/>
-					<div>
+					<div className="ml-2">
 						<span className="flex justify-normal">
 							<p className="text-base font-semibold mr-2">{userConnected.name}</p>
 							<a href="https://github.com/jeanbaptisteLedig">
 								<GitHubIcon fontSize="small" />
 							</a>
 						</span>
-
-						<p className="text-sm text-gray-500">{userConnected.email}</p>
+						<p className="text-sm text-gray-500">
+							<a href={`mailto:${userConnected.email}`}>{userConnected.email}</a>
+						</p>
 					</div>
 				</div>
 			</div>
