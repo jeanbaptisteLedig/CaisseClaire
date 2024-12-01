@@ -1,6 +1,6 @@
 # CaisseClaire
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3a74f22a-7639-4cca-80c9-6b96e20722c2/deploy-status)](https://app.netlify.com/sites/caisse-claire/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a74f22a-7639-4cca-80c9-6b96e20722c2/deploy-status)](https://caisse-claire.netlify.app)
 
 ## Table of contents
 
