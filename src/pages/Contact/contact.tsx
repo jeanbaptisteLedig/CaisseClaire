@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
 
 	const onSubmit: SubmitHandler<IContactFormInputs> = (data) => {
 		console.log(data)
-		alert('Formulaire envoyé avec succès !')
+		alert('Form sent successfully !')
 	}
 
 	return (
@@ -19,11 +19,11 @@ const Contact: React.FC = () => {
 			<div className="relative flex-1">
 				<img
 					src="https://img.freepik.com/free-psd/3d-illustration-delivery-man-character-with-rotary-phone_23-2149507166.jpg?t=st=1733067688~exp=1733071288~hmac=631db2df6347b06f25a77aa25079fa7a7ea4e9ba2c97008cdea81189904f0dce&w=2000"
-					alt="Delivery man"
+					alt="men with a phone"
 					className="w-full h-full object-cover"
 				/>
 				<div className="h-20 absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent text-white text-center py-4">
-					<p className="align-bottom text-lg font-semibold">Nous sommes là pour vous aider</p>
+					<p className="align-bottom text-lg font-semibold">We would be happy to help you</p>
 				</div>
 			</div>
 
@@ -33,19 +33,19 @@ const Contact: React.FC = () => {
 					onSubmit={handleSubmit(onSubmit)}
 					className="w-full max-w-md bg-white p-6 rounded-md shadow-md space-y-4"
 				>
-					<h2 className="text-2xl font-bold text-gray-800">Contactez-nous</h2>
+					<h2 className="text-2xl font-bold text-gray-800">Contact us</h2>
 
 					{/* Name */}
 					<div className="flex gap-4">
 						<div className="flex-1">
 							<label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-								Prénom
+								First name
 							</label>
 							<input
 								type="text"
 								id="firstName"
 								{...register('firstName', {
-									required: 'Le prénom est obligatoire.',
+									required: 'First name is mandatory.',
 								})}
 								className={`mt-1 block w-full p-2 border ${
 									errors.firstName ? 'border-red-500' : 'border-gray-300'
@@ -57,13 +57,13 @@ const Contact: React.FC = () => {
 						</div>
 						<div className="flex-1">
 							<label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-								Nom
+								Last Name
 							</label>
 							<input
 								type="text"
 								id="lastName"
 								{...register('lastName', {
-									required: 'Le nom est obligatoire.',
+									required: 'Last name is mandatory.',
 								})}
 								className={`mt-1 block w-full p-2 border ${
 									errors.lastName ? 'border-red-500' : 'border-gray-300'
@@ -82,10 +82,10 @@ const Contact: React.FC = () => {
 							type="email"
 							id="email"
 							{...register('email', {
-								required: "L'email est obligatoire.",
+								required: 'Email is mandatory.',
 								pattern: {
 									value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-									message: 'Adresse email invalide.',
+									message: 'Invalid email.',
 								},
 							})}
 							className={`mt-1 block w-full p-2 border ${
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
 						</label>
 						<textarea
 							id="message"
-							{...register('message', { required: 'Le message est obligatoire.' })}
+							{...register('message', { required: 'Message is mandatory.' })}
 							rows={4}
 							className={`mt-1 block w-full p-2 border ${
 								errors.message ? 'border-red-500' : 'border-gray-300'
@@ -111,12 +111,12 @@ const Contact: React.FC = () => {
 						{errors.message && <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>}
 					</div>
 
-					{/* Bouton Submit */}
+					{/* Submit button */}
 					<button
 						type="submit"
 						className="w-full bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-md transition duration-200"
 					>
-						Envoyer
+						Send
 					</button>
 				</form>
 			</div>

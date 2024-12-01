@@ -24,11 +24,11 @@ export default function CompanyPage() {
 				<p className="text-gray-600 mb-4">{companyData?.data?.description}</p>
 				<div className="grid grid-cols-2 gap-4 mb-6">
 					<div>
-						<h2 className="text-lg font-semibold text-gray-700">Prix actuel</h2>
+						<h2 className="text-lg font-semibold text-gray-700">Actual price</h2>
 						<span className="text-3xl font-bold text-blue-600">${companyData?.data?.volume}</span>
 					</div>
 					<div>
-						<h2 className="text-lg font-semibold text-gray-700">Capitalisation boursière</h2>
+						<h2 className="text-lg font-semibold text-gray-700">Market capitalisation</h2>
 						<span
 							className={`text-xl font-medium ${companyData?.data?.change! > 0 ? 'text-emerald-500' : 'text-red-600'} text-right`}
 						>
@@ -37,7 +37,7 @@ export default function CompanyPage() {
 					</div>
 				</div>
 				<div>
-					<h2 className="text-lg font-semibold text-gray-700 mb-4">Évolution du prix de l'action</h2>
+					<h2 className="text-lg font-semibold text-gray-700 mb-4">Stock price evolution</h2>
 					<div className="bg-gray-50 p-4 rounded-lg shadow">
 						<LineChart
 							series={[
