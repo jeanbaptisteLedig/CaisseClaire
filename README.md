@@ -13,14 +13,13 @@
 
 ---
 
-CaisseClaire is a static web application that I developed as part of my interview process at Yeap.ai. The objectives was to train for the interview by using Yeap stacks and tools.
-The application is very basic, and its purpose is to help me practice using Yeap's technology stack in preparation for the interview.
+CaisseClaire is a static web application I developed as part of my interview process with Yeap.ai. The objective was to prepare for the interview by practicing with Yeap's technology stack and tools. The application is intentionally simple, serving as a hands-on exercise to familiarize myself with their stack in anticipation of the interview.
 
 ### Technologies
 
 ---
 
-A list of technologies used within the project:
+A list of technologies and librairies used within the project:
 
 - [React JS](https://reactjs.org/): Version ^18.3.1
 - [Vite JS](https://vite.dev/): Version ^4.5.5
@@ -28,6 +27,7 @@ A list of technologies used within the project:
 - [Tailwind CSS](https://tailwindcss.com/): Version ^3.4.15
 - [AG-Grid](https://www.ag-grid.com): Version ^32.3.3
 - [Tanstack React Query](https://tanstack.com): Version ^5.61.4
+- [Storybook](https://storybook.js.org/): Version ^8.4.6
 
 ### Available Scripts
 
@@ -52,6 +52,11 @@ You will also see any lint errors in the console.
 
 Builds the app for production into the `dist` folder.  
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+#### `npm run storybook`
+
+Runs the storybook environment.
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 
 ### Project Structure
 
@@ -90,4 +95,4 @@ Cette hiérarchie permet d'organiser clairement les layouts imbriqués, mais dem
 
 #### AG-Grid
 
-J'ai voulu utiliser AG-Grid pour me familiariser avec cette bibliothèque et découvrir ses fonctionnalités. Malheureusement, de nombreuses fonctionnalités ne sont pas disponibles dans la version gratuite, notamment les Sparklines, qui me semblaient intéressantes pour une application affichant des données sur des tendances.
+J'ai souhaité utiliser AG-Grid pour me familiariser avec cette bibliothèque et découvrir ses fonctionnalités. Malheureusement, de nombreuses fonctionnalités ne sont pas disponibles dans la version gratuite, notamment les Sparklines, qui me semblaient intéressantes pour une application affichant des données sur des tendances. J'ai néanmoins pu utiliser une grille simple pour afficher une liste d'entreprises avec des informations. Pour les graphiques, j'ai utilisé la bibliothèque MUI X Graphs.
