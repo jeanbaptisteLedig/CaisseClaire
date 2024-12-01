@@ -32,7 +32,7 @@ A list of technologies used within the project:
 How to install the project locally ?
 
 ```powershell
-$ git clone https://github.com/jeanbaptisteLedig/MyFinancialApp.git caisse-claire
+$ git clone https://github.com/jeanbaptisteLedig/CaisseClaire.git caisse-claire
 $ git cd caisse-claire
 $ npm install
 $ npm run dev
