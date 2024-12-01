@@ -19,7 +19,7 @@ export default function Leaderboard({ title, list }: { title: string; list: ILea
 							/>
 							<div>
 								<p className="text-xl font-semibold">{element.name}</p>
-								<p className="text-gray-500">Bonjour</p>
+								<p className="text-xs text-gray-500">{element.description}</p>
 							</div>
 						</div>
 
