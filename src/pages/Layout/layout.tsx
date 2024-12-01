@@ -15,6 +15,7 @@ import { Container } from '@mui/material'
 
 import { SidebarFooterAccount } from '../../components/Sidebar/sidebarFooterAccount'
 import { fetchConnectedUser } from '../../services/api-services'
+import ToolbarActionsHeader from '../../components/ToolbarActionsHeader/toolbarActionsHeader'
 
 export default function Layout() {
 	const [sessionData, setSessionData] = useState<Session | null>({ user: fetchConnectedUser() })
@@ -87,6 +88,7 @@ export default function Layout() {
 				slots={{
 					toolbarAccount: () => null,
 					sidebarFooter: SidebarFooterAccount,
+					toolbarActions: ToolbarActionsHeader,
 				}}
 			>
 				<Container className="mt-4 xl:mt-8">

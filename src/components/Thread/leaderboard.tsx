@@ -1,3 +1,5 @@
+import FollowButton from '../Follow/follow'
+
 export default function Leaderboard({ title, list }: { title: string; list: ILeaderboardList }) {
 	return (
 		<div className="max-w-4xl mx-auto mb-6 p-3 bg-white rounded-xl">
@@ -22,9 +24,7 @@ export default function Leaderboard({ title, list }: { title: string; list: ILea
 						</div>
 
 						{/* Right Side: Follow Button */}
-						<button className="rounded-full items-center bg-sky-500 px-1.5 py-0.5 border border-transparent text-sm text-white transition-all shadow-sm">
-							Follow
-						</button>
+						<FollowButton />
 					</div>
 				))}
 			</div>

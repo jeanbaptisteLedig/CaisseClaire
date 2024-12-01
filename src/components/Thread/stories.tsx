@@ -25,15 +25,23 @@ const Stories = () => {
 				{/* Navigation Arrows */}
 				<div className="space-x-2">
 					<button
+						id="previousStories"
+						role="button"
+						type="button"
+						aria-label="Previous Stories"
 						onClick={prevStories}
-						className="py-1 px-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+						className="py-1 px-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:bg-gradient-to-r hover:from-sky-500 hover:via-indigo-500 hover:to-fuchsia-500"
 						disabled={startIndex === 0}
 					>
 						<ArrowBackOutlinedIcon />
 					</button>
 					<button
+						id="nextStories"
+						role="button"
+						type="button"
+						aria-label="Next Stories"
 						onClick={nextStories}
-						className="py-1 px-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+						className="py-1 px-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:bg-gradient-to-r hover:from-sky-500 hover:via-indigo-500 hover:to-fuchsia-500"
 						disabled={startIndex + visibleStoriesCount >= storiesData.length}
 					>
 						<ArrowForwardOutlinedIcon />
@@ -46,10 +54,15 @@ const Stories = () => {
 					<div key={story.id} className="flex-shrink-0 w-1/3 p-2 transition-transform transform">
 						<div className="flex flex-col h-[300px] border border-gray-300 rounded-lg overflow-hidden">
 							<div className="h-2/3">
-								<img src={story.image} alt={story.title} className="w-full h-full object-cover" />
+								<img
+									src={story.image}
+									alt={story.title}
+									className="w-full h-full object-cover"
+									loading="lazy"
+								/>
 							</div>
 							<div className="h-1/3 p-4 flex flex-col justify-between">
-								<h3 className="text-lg font-bold text-gray-800">{story.title}</h3>
+								<h1 className="text-lg font-bold text-gray-800">{story.title}</h1>
 								<p className="text-sm text-gray-600">{story.description}</p>
 							</div>
 						</div>

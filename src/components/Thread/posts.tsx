@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import { fetchPosts } from '../../services/api-services'
+import FollowButton from '../Follow/follow'
 
 export default function Posts() {
 	const [posts, setPosts] = useState<IPosts>(fetchPosts())
@@ -16,10 +17,10 @@ export default function Posts() {
 						</span>
 						<div>
 							{/* Right Side: Follow Button */}
-							<button className="rounded-full items-center bg-sky-500 px-1.5 py-0.5 border border-transparent text-sm text-white transition-all shadow-sm">
-								Follow
+							<FollowButton />
+							<button id="more" role="button" type="button" aria-label="More information">
+								<MoreVertIcon />
 							</button>
-							<MoreVertIcon />
 						</div>
 					</div>
 					<p className="mt-2 text-gray-800">{post.content}</p>

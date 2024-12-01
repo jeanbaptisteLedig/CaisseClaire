@@ -13,18 +13,24 @@ export default function NewPost() {
 			<div className="flex justify-between items-center">
 				{/* Button to add cotent */}
 				<div className="space-x-1">
-					<button>
+					<button id="bitcoin" role="button" type="button" aria-label="Bitcoin button">
 						<CurrencyBitcoinOutlinedIcon />
 					</button>
-					<button>
+					<button id="photo" role="button" type="button" aria-label="Photo button">
 						<InsertPhotoOutlinedIcon />
 					</button>
-					<button>
+					<button id="videocam" role="button" type="button" aria-label="Videocam button">
 						<VideocamOutlinedIcon />
 					</button>
 				</div>
 				{/* Button to post */}
-				<button className="ml-auto px-6 py-2 bg-sky-700 text-white rounded-md hover:bg-sky-800 focus:outline-none">
+				<button
+					id="post"
+					role="button"
+					type="button"
+					aria-label="Post"
+					className="ml-auto px-6 py-2 bg-sky-900 text-white rounded-md hover:bg-sky-800 hover:shadow-lg focus:outline-none"
+				>
 					Post
 				</button>
 			</div>
