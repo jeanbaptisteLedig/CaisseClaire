@@ -100,10 +100,10 @@ J'ai souhaité utiliser AG-Grid pour me familiariser avec cette bibliothèque et
 ### Todo
 
 - Créer plus de composants pour tout ce qui est réutilisable
-- Créer les fichers test et stories associés à ces nouveaux composants
+- Créer les fichiers test et stories associés à ces nouveaux composants
 - Améliorer le mode mobile (responsive)
 - Améliorer la performance globale de l'application
-    - Dashboard Layout est peut être un composant lourd qui impact les performances -> trouver une solution alternative
-    - Utiliser plus de Lazy Loading pour ce qui n'apparait pas à l'écran lors du premier chargement
+    - Dashboard Layout est peut-être un composant lourd qui impacte les performances -> trouver une solution alternative
+    - Utiliser plus de Lazy Loading pour ce qui n'apparaît pas à l'écran lors du premier chargement
     - Ajouter un système de pagination sur les Posts
-- Avoir un système de stories (carousel) utilisanle intuitivement sur mobile
+- Avoir un système de stories (carousel) utilisable intuitivement sur mobile
