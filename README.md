@@ -96,3 +96,14 @@ Cette hiérarchie permet d'organiser clairement les layouts imbriqués, mais dem
 #### AG-Grid
 
 J'ai souhaité utiliser AG-Grid pour me familiariser avec cette bibliothèque et découvrir ses fonctionnalités. Malheureusement, de nombreuses fonctionnalités ne sont pas disponibles dans la version gratuite, notamment les Sparklines, qui me semblaient intéressantes pour une application affichant des données sur des tendances. J'ai néanmoins pu utiliser une grille simple pour afficher une liste d'entreprises avec des informations. Pour les graphiques, j'ai utilisé la bibliothèque MUI X Graphs.
+
+### Todo
+
+- Créer plus de composants pour tout ce qui est réutilisable
+- Créer les fichers test et stories associés à ces nouveaux composants
+- Améliorer le mode mobile (responsive)
+- Améliorer la performance globale de l'application
+    - Dashboard Layout est peut être un composant lourd qui impact les performances -> trouver une solution alternative
+    - Utiliser plus de Lazy Loading pour ce qui n'apparait pas à l'écran lors du premier chargement
+    - Ajouter un système de pagination sur les Posts
+- Avoir un système de stories (carousel) utilisanle intuitivement sur mobile
